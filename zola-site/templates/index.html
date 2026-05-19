@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="portrait">
+  <div class="portrait__photo-wrap">
+    <img class="portrait__photo"
+         src="{{ get_url(path='images/portrait-roland-fleischer.png') | safe }}"
+         alt="Portraitfoto von Roland Fleischer"
+         width="734" height="980">
+  </div>
+  <div class="portrait__heading">
+    <h1>Roland Fleischer</h1>
+    <p class="portrait__tagline">Pastor &amp; Historiker — Hamburg</p>
+  </div>
+</article>
+
+<section class="prose">
+  {{ section.content | safe }}
+</section>
+{% endblock %}

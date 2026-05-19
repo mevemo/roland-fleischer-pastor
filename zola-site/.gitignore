@@ -1,0 +1,13 @@
+# Zola
+public/
+static/processed_images/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~

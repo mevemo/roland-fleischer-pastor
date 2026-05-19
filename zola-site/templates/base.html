@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default(value="de") }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
+
+  {# Google Fonts: Cormorant Garamond für Überschriften, Source Sans 3 für Fließtext #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
+  <link rel="icon" type="image/png" href="{{ get_url(path='images/favicon.png') | safe }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__brand" href="{{ get_url(path='/') | safe }}">
+        <span class="site-header__name">Roland Fleischer</span>
+        <span class="site-header__role">Pastor &amp; Historiker</span>
+      </a>
+      <nav class="site-header__nav" aria-label="Hauptnavigation">
+        <a href="{{ get_url(path='/#forschung') | safe }}">Forschung</a>
+        <a href="{{ get_url(path='/#veroeffentlichungen') | safe }}">Veröffentlichungen</a>
+        <a href="{{ get_url(path='/#vita') | safe }}">Vita</a>
+        <a href="{{ get_url(path='/#kontakt') | safe }}">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>&copy; {{ now() | date(format="%Y") }} Roland Fleischer, Hamburg</p>
+      <p><a href="{{ get_url(path='/impressum/') | safe }}">Impressum</a> &middot; <a href="{{ get_url(path='/datenschutz/') | safe }}">Datenschutz</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+base_url = "https://roland-fleischer-pastor.de"
+title = "Roland Fleischer — Pastor & Historiker"
+description = "Forschung zur Geschichte der Baptisten in Deutschland und zu den Beziehungen von Baptisten und Juden."
+default_language = "de"
+
+compile_sass = true
+build_search_index = false
+
+minify_html = true
+
+[markdown]
+smart_punctuation = true
+
+[extra]
+author = "Roland Fleischer"
+location = "Hamburg"
+email = "r.b.fleischer@gmx.de"
